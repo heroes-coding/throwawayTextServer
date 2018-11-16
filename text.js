@@ -23,8 +23,7 @@ const getAudio = text => new Promise(async(resolve, reject) => {
   console.log('get audio called',text)
   const synthesizeParams = {
     text: text + "!",
-    accept: 'audio/mp3',
-    voice: 'en-GB_KateVoice'
+    accept: 'audio/mp3'
   }
   let synthFunction = textToSpeech.synthesize(synthesizeParams)
   while (!synthFunction) {
